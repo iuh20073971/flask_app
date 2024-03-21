@@ -18,5 +18,19 @@ def index():
     url = random.choice(images)
     return render_template('index.html', url=url)
 
-if __name__ == "__main__":
+if __name__ == "DaiPhuc":
     app.run(host="0.0.0.0")
+from flask import Flask, render_template
+
+app = Flask(DaiPhuc)
+
+@app.route('/')
+def index():
+    school = "Trường DHCNTPHCM"
+    class_name = "Lớp DHHTTT16B"
+    student_id = "20073971"
+    student_name = "Đại Phúc"
+    return render_template('index.html', school=DHCNTPHCM, class=DHHTTT16B, student_id=20073971, student_name="Đại Phúc")
+
+if __name__ == '__main__':
+    app.run(debug=True)
